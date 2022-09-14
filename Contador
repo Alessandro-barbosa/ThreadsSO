@@ -1,0 +1,29 @@
+
+package javaapplication1;
+import java.util.Scanner;
+
+public class ExemploContador {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        Contador t1 = new Contador(0, 25);
+        Contador t2 = new Contador(26, 50);
+        Contador t3 = new Contador(51, 75);
+        Contador t4 = new Contador(76, 100);
+        int opcao;
+        t1.start();
+        t2.start();
+        t3.start();
+        t4.start(); 
+           try {
+            t1.join();
+            t2.join();
+            t3.join();
+            t4.join();
+        } catch (InterruptedException ex) {
+            ex.printStackTrace();
+        }
+        opcao = in.nextInt();
+        System.out.println("opcao: " + opcao);
+        System.out.println("TOTAL: " + (t1.getTotal() + t2.getTotal() + t3.getTotal() + t4.getTotal()));
+    }
+}
