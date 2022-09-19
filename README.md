@@ -1,1 +1,1 @@
-# Tarefas de Threads feita na disciplina de SO
+# Tarefas de Threads feitas na disciplina de SO
